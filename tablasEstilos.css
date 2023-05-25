@@ -1,0 +1,211 @@
+* {
+  margin: : 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  background-color: #cfcfcf;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 70px auto 50px;
+    justify-content: space-between;
+    grid-column-gap: 15px;
+
+
+
+}
+
+
+
+
+header {
+  background-color: ivory;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  margin-bottom: 15px;
+  
+}
+
+
+
+h1 {
+  
+  font-size: 50px;
+	color: #3d44a6;
+  padding-left: 10px;
+  height: 40px;
+  font-family: 'Roboto Mono', monospace;
+  height: 20%;
+}
+
+
+h3 {
+  padding-left: 10px;
+  height: auto;
+  font-family: 'Fira Sans', sans-serif;
+
+}
+
+
+/* Contenedor de los botones superiores */
+.cont_botones_app {
+  background-color: ivory;
+  padding: 15px;
+  
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+}
+
+
+button {
+  background-color: #323680;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  
+}
+
+button:hover {
+  background-color: #2b87ff;
+  cursor: pointer;
+}
+
+
+/* El ícono "i" del botón Test. Viene como CDN de Font Awesome */
+i {
+  margin-left: 10px;
+}
+
+
+
+/* Tabla */
+table {
+  border:1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  
+
+ 
+}
+
+
+/* Inputs */
+input {
+  width: 40px;
+}
+
+/* Cada una de las celdas */
+td {
+  width: 30px;
+  border:1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+
+/* La primer fila de la tabla, que funciona como encabezado */
+th {
+  background-color: darkgrey;
+}
+
+
+/* Le dá un color gris claro a las celdas pares */
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+/* Contenedor de los botones inferiores de la tabla */
+.cont_botones_tabla {
+  background-color: ivory;
+  padding: 15px;
+  height: 70px;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+
+  
+    
+
+}
+
+/*Contenedor del gŕafico y del título*/
+.contenedor_del_grafico {
+  background-color: ivory;
+  height: 100%;
+}
+
+
+/*Contenedor del título del gŕafico*/
+.titulo_del_grafico {
+  color: #3d44a6;
+  background-color: ivory;
+  padding-left: 10px;
+  height: 30px;
+}
+
+
+/* El gráfico */
+canvas {
+  background-color: white;
+  width:100%;
+  max-width:100%;
+  padding: 10px 10px 30px 10px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 5;
+  
+  
+}
+
+
+
+/* El tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 10%;
+  margin-left: -60px;
+
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+

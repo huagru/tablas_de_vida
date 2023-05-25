@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cálculo de Tablas de Vida">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <title>Cálculo de tablas de vida</title>
+    
+    <link rel="stylesheet" href="tablasEstilos.css">
+    <script type="text/javascript" src="tablasJS.js"></script>
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"> 
+
+    <!--Ícono "i" de Font Awesome como CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Gráfico-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+    
+
+
+
+</head>
+
+<body>
+    
+<!--Encabezado h1 y el h3-->
+    <header>
+        <h1>TABLAS DE VIDA</h1>
+        <h3>Técnicas Demográficas: cálculo de variables de tablas de vida para el estudio de poblaciones.</h3>
+    </header>
+
+    
+<!--Contenedor de los botones superiores-->
+    <div class="cont_botones_app">
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpiar_datos()">Limpiar tabla</button>
+        
+        <button onclick="test()" id="boton_test" class="tooltip">Test 
+            <span class="tooltiptext">El botón "Test" carga automáticamente la tabla con valores de un caso real y realiza los cálculos correspondientes como prueba.</span>
+            <i class="fa fa-info-circle" style="font-size:15px"></i>
+            
+
+        </button>
+    </div>
+    
+
+
+<!--Tabla: contiene todas las filas y las columnas-->
+    <table id="tabla">
+    
+      <!--tr: cada fila de la tabla; td: cada celda de la tabla-->  
+      <tr>
+        <th>x</th>
+        <th>nx</th> <!--th es table header-->
+        <th>lx</th>
+        <th>dx</th>
+        <th>qx</th>
+        <th>Lx</th>
+        <th>Tx</th>
+        <th>ex</th>
+      </tr>
+      
+      <tr>
+        <td><input type="text" class="input1"></td>
+        <td><input type="text" class="input2"></td>
+        <td class="celda lx"></td>
+        <td class="celda dx"></td>
+        <td class="celda qx"></td>
+        <td class="celda Lx"></td>
+        <td class="celda Tx"></td>
+        <td class="celda ex"></td>
+      </tr>
+      
+    </table> 
+
+
+<!--Contenedor de los botones inferiores de la tabla-->
+    <div class="cont_botones_tabla">
+        <button onclick="agregar_fila()">Agregar fila</button>
+        <button onclick="borrar_fila()">Borrar fila</button>
+    </div>
+
+
+    
+<!--Div que contiene el título de la gráfica y la gráfica-->
+    <div class="contenedor_del_grafico">
+        <h3 class="titulo_del_grafico">NUMERO DE SUPERVIVIENTES VS. INTERVALOS</h3>
+        
+        <!--Gráfica-->
+        <canvas id="myChart">
+            
+
+        </canvas>
+    </div>
+        
+    
+    
+
+</body>
+</html>
